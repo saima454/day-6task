@@ -74,10 +74,10 @@ export default function Header() {
           <Link href="/" className="text-sm leading-6 text-white hover:text-gray-300">
             Home
           </Link>
-          <Link href="#" className="text-sm leading-6 text-white hover:text-gray-300">
+          <Link href="/shop" className="text-sm leading-6 text-white hover:text-gray-300">
             Shop
           </Link>
-          <Link href="/about" className="text-sm leading-6 text-white hover:text-gray-300">
+          <Link href="#" className="text-sm leading-6 text-white hover:text-gray-300">
             About
           </Link>
           <Link href="#" className="text-sm leading-6 text-white hover:text-gray-300">

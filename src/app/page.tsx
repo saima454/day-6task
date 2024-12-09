@@ -6,7 +6,8 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 import Hero from "@/components/Hero";
-import Picture from "@/components/Picture";
+
+import ShopCard from "@/components/ShopCard";
 
 
 
@@ -17,11 +18,14 @@ export default function Home() {
       <Header/>
       
       <Hero/>
+      <BestProduct/>
+     
+    
+      <Footer/>
+     
 
      
-    <BestProduct/>
-    <Picture/>
-    <Footer/>
+  
     </div>
   )
     
