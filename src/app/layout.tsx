@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,9 +31,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
+   <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css"/>
+   </head>
+
+
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
+   <Script
+          src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"
+          strategy="afterInteractive"/>
+
+<div hidden id="snipcart" data-api-key={process.env.NEXT_PUBLIC_SNIPCART_API_KEY} data-config-modal-style="none"></div>
         {children}
       </body>
     </html>

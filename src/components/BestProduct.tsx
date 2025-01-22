@@ -1,3 +1,4 @@
+import { client } from "@/sanity/lib/client"
 import Image from "next/image"
 
 const products = [
@@ -75,7 +76,22 @@ const products = [
   },
 ]
 
-export default function BestProduct() {
+export default async function BestProduct() {
+  
+  interface Card {
+    cardHeading: string;
+    cardImg: string;
+    cardSubHeading: string;
+    cardPrice: number;
+    cardOldPrice: number;
+  }
+
+  const res = await client.fetch(`*[_type == 'landingPage'][0].sections[0]{ 'cardsMainHeading': cardsMainHeading, 'cards': cards[]{'cardHeading': cardHeading,'cardImg': cardImg.asset->url, 'cardSubHeading': cardSubHeading,'cardPrice': cardPrice, 'cardOldPrice': cardOldPrice }}`)
+    
+
+  const {cardsMainHeading, cards} =  res
+
+ 
   return (
     <section className="py-20 px-4 bg-white">
       <div className="container mx-auto max-w-7xl">
@@ -85,32 +101,32 @@ export default function BestProduct() {
           <p className="text-gray-600">Problems trying to resolve the conflict between</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product) => (
-            <div key={product.id} className="flex flex-col">
+          {cards.map((product: Card, index: number) => (
+            <div key={index} className="flex flex-col">
               <div className="relative aspect-[239/427] mb-6">
                 <Image
-                  src={product.image}
-                  alt={product.title}
+                  src={product.cardImg}
+                  alt={"image"}
                   layout="fill"
                   objectFit="cover"
                   className="rounded-lg"
                 />
               </div>
               <div className="flex flex-col items-center px-6">
-                <h3 className="text-gray-900 text-base font-bold mb-2">{product.title}</h3>
-                <p className="text-gray-600 text-sm font-bold mb-2">{product.category}</p>
+                <h3 className="text-gray-900 text-base font-bold mb-2">{product.cardHeading}</h3>
+                <p className="text-gray-600 text-sm font-bold mb-2">{product.cardSubHeading}</p>
                 <div className="flex justify-center items-center gap-2 mb-4">
-                  <span className="text-gray-400 text-base font-bold">{product.originalPrice}</span>
-                  <span className="text-teal-700 text-base font-bold">{product.salePrice}</span>
+                  <span className="text-gray-400 text-base font-bold">{product.cardPrice}</span>
+                  <span className="text-teal-700 text-base font-bold">{product.cardOldPrice}</span>
                 </div>
                 <div className="flex justify-center gap-2">
-                  {product.colors.map((color, index) => (
+                  {/* {product.colors.map((color, index) => (
                     <div
                       key={index}
                       className="w-4 h-4 rounded-full"
                       style={{ backgroundColor: color }}
                     />
-                  ))}
+                  ))} */}
                 </div>
               </div>
             </div>
