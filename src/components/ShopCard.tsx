@@ -1,9 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Men from "@/images/card-1.jpg";
-import women from "@/images/card-2.jpg";
-import div1 from "@/images/card-3.jpg";
-import div2 from "@/images/card-4.jpg";
+
 
 const ShopCard = () => {
   return (
