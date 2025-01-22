@@ -77,17 +77,17 @@ export default function Header() {
           <Link href="/shop" className="text-sm leading-6 text-white hover:text-gray-300">
             Shop
           </Link>
-          <Link href="#" className="text-sm leading-6 text-white hover:text-gray-300">
+          <Link href="/about" className="text-sm leading-6 text-white hover:text-gray-300">
             About
           </Link>
-          <Link href="#" className="text-sm leading-6 text-white hover:text-gray-300">
+          <Link href="/blog" className="text-sm leading-6 text-white hover:text-gray-300">
             Blog
           </Link>
           <Link href="#" className="text-sm leading-6 text-white hover:text-gray-300">
             Contact
           </Link>
-          <Link href="#" className="text-sm leading-6 text-white hover:text-gray-300">
-            Pages
+          <Link href="/products" className="text-sm leading-6 text-white hover:text-gray-300">
+            Products
           </Link>
         </div>
 
