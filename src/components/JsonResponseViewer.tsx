@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Download, Package, Truck, DollarSign, MapPin } from 'lucide-react'
 import { AlertDialog, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+import Link from 'next/link'
 
 interface ShipmentResponse {
   label_id: string
@@ -59,7 +60,7 @@ export default function JsonResponseViewer({ data }: JsonResponseViewerProps) {
 
   return (
     <div className="container mx-auto p-4">
-      <Button 
+   <Button 
         className="bg-blue-500 hover:bg-blue-600 text-white"
         onClick={() => setIsDialogOpen(true)}
       >

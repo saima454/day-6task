@@ -3,11 +3,14 @@ import React from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import PartnersSection from '@/components/partner'
-import Header from '@/components/Header'
+
+import { WorkWithUs } from '@/components/work-with-us'
+import { AboutHeader } from '@/components/header1'
+
 function AboutPage() {
   return (
     <div>
-        <Header/>
+<AboutHeader/>
         
         <div className='w-[1440px] h-[729px] relative'>
             <Image src={'/aboutImage.png'} alt='' width={1440} height={729}/>
@@ -71,16 +74,7 @@ function AboutPage() {
        </div>
 
 
-       <div className='w-[1440px] h-[636px] bg-[#2A7CC7] mb-[80px] px-[195px]'>
-        <div className='w-[1050px] h-[636px] py-[112px]'>
-          <div className=' w-[1050px] h-[412px] py-[87px] pr-[612px] bg-red-500 text-white'>
-            <p className='text-[16px] font-bold'>WORK WITH US</p>
-            <h1 className='text-[40px] font-bold lesding-50'>Now Let’s grow Yours</h1>
-          </div>
-        </div>
-
-       </div>
-      
+      <WorkWithUs/>
        
 
     </div>
