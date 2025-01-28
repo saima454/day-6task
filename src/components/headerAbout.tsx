@@ -70,8 +70,8 @@ export default function Navbar() {
                 <Link href="/contact" className="text-gray-500 font-medium hover:text-[#23A6F0]">
                   Contact
                 </Link>
-                <Link href="/pages" className="text-gray-500 font-medium hover:text-[#23A6F0]">
-                  Pages
+                <Link href="/products" className="text-gray-500 font-medium hover:text-[#23A6F0]">
+                  Products
                 </Link>
               </div>
             </div>

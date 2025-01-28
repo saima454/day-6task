@@ -5,12 +5,14 @@ import { Button } from '@/components/ui/button'
 import PartnersSection from '@/components/partner'
 
 import { WorkWithUs } from '@/components/work-with-us'
-import { AboutHeader } from '@/components/header1'
+
+import PricingHeader from '@/components/pricingHeader'
+import Footer from '@/components/Footer'
 
 function AboutPage() {
   return (
     <div>
-<AboutHeader/>
+ <PricingHeader/>
         
         <div className='w-[1440px] h-[729px] relative'>
             <Image src={'/aboutImage.png'} alt='' width={1440} height={729}/>
@@ -75,6 +77,7 @@ function AboutPage() {
 
 
       <WorkWithUs/>
+      <Footer/>
        
 
     </div>

@@ -1,4 +1,5 @@
 import AboutCard from '@/components/AboutCards';
+import HeaderAbout from '@/components/headerAbout';
 import { client } from '@/sanity/lib/client';
 import { fetchData } from '@/services/api';
 import React from 'react'
@@ -22,6 +23,7 @@ import React from 'react'
  
   return (
     <div>
+       <HeaderAbout/>
         <AboutCard/> 
     </div>
   )

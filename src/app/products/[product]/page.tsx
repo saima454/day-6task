@@ -13,6 +13,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
+
 const colorOptions = [
   { name: "Blue", class: "bg-[#23A6F0]" },
   { name: "Green", class: "bg-[#2DC071]" },
@@ -32,9 +33,10 @@ export default async function ProductDetail({
 }) {
   const { name, price, description, image } = await searchParams;
 
-  console.log(name);
+
 
   return (
+   
     <section className="bg-[#FAFAFA] py-12 font-montserrat">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

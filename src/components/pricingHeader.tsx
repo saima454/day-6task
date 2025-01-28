@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Product", href: "/product" },
+  { name: "Products", href: "/products" },
   { name: "Pricing", href: "/pricing" },
   { name: "Contact", href: "/contact" },
 ]
@@ -87,7 +87,7 @@ export default function PricingHeader() {
         </div>
       )}
 
-      {/* Hero Section */}
+      {/* Hero Section
       <div className="container mx-auto px-4 py-8 sm:py-[50px] flex flex-col items-center">
         <div className="flex flex-col items-center gap-4 max-w-[427px] text-center">
           <h5 className="font-bold text-sm sm:text-base text-[#737373] tracking-[0.1px]">PRICING</h5>
@@ -102,7 +102,7 @@ export default function PricingHeader() {
             <span className="font-bold text-xs sm:text-sm text-[#737373] tracking-[0.2px]">Pricing</span>
           </div>
         </div>
-      </div>
+      </div> */}
     </header>
   )
 }

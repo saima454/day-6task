@@ -178,7 +178,7 @@ export default function ShoppingCart(){
                 <span>Total</span>
                 <span>₹ {cartItem.reduce((total, item)=> total + Number(item.price) * item.quantity, 0).toFixed(2).toLocaleString()}</span>
               </div>
-              <Link href={"/shipment"}>
+              <Link href={"/checkout"}>
                 <Button className="w-full">Member Checkout</Button>
               </Link>
             </div>
